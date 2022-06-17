@@ -18,3 +18,12 @@ test('getHash and getName are the same', t => {
     t.equal(name, hash, 'getName and getHash are synonymous')
     t.end()
 })
+
+test('with a base64 image', t => {
+    const pic = fs.readFileSync(__dirname + '/cinnamon-roll.jpg')
+    const buf = Buffer.from(pic).toString('base64')
+    const hash = getName(buf)
+    console.log('from base64', hash)
+    t.ok(hash, 'got a hash via base64 image')
+    t.end()
+})
