@@ -70,20 +70,20 @@ const createHash = require('create-hash')
 //     return hasher
 // }
 
+// given a blob, return a URL/path friendly string
 function getHash (toHash, alg) {
     const hash = alg === 'blake2s' ?
         blake() :
-        createHash('sha256')
+        createHash(alg || 'sha256')
 
     // const hash = createHash(alg || 'sha256')
     hash.update(toHash)
-    return hash.digest('hex') + '.' + (alg || 'sha256')
+    return hash.digest('base64url') + '.' + (alg || 'sha256')
 }
 
 // given a blob, return a URL/path friendly string
 function getName (file, alg) {
     return getHash(file, alg)
-    // hash.toString('hex')
 }
 
 module.exports = {
