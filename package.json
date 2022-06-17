@@ -13,7 +13,9 @@
   },
   "keywords": [
     "hash",
-    "browser"
+    "browser",
+    "url",
+    "safe"
   ],
   "author": "nichoth",
   "license": "ISC",
