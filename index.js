@@ -9,7 +9,7 @@ const createHash = require('create-hash')
 // function desigil (hash) {
 //     return isBlob(hash) ? hash.substring(1) : hash
 // }
-  
+
 // function resigil (hash) {
 //     return isBlob(hash) ? hash : '&' + hash
 // }
@@ -56,7 +56,7 @@ const createHash = require('create-hash')
 // exports.createHash = function (alg, noCompat) {
 //     alg = alg || 'blake2s'
 //     var hash = algs[alg]()
-  
+
 //     var hasher = pull.through(function (data) {
 //       data = isBuffer(data) ? data : new Buffer(data)
 //       hasher.size += data.length
@@ -65,7 +65,7 @@ const createHash = require('create-hash')
 //       return hasher.digest = noCompat === true ? hash.digest() : hash.digest('base64') + '.' + alg
 //   //    hasher.digest = digest
 //     })
-  
+
 //     hasher.size = 0
 //     return hasher
 // }
@@ -90,3 +90,4 @@ module.exports = {
     getHash,
     getName
 }
+
