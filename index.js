@@ -72,6 +72,7 @@ const createHash = require('create-hash')
 
 // given a blob, return a URL/path friendly string
 function getHash (toHash, alg) {
+    // @TODO -- blake
     const hash = alg === 'blake2s' ?
         blake() :
         createHash(alg || 'sha256')
