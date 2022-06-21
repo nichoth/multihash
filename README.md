@@ -1,4 +1,4 @@
-# hash
+# multihash
 
 Create path & URL safe hashes of files. Suitable for use in a browser
 
