@@ -14,6 +14,7 @@ npm i -S @nichoth/multihash
 ## example
 
 ```js
+const fs = require('fs')
 const { getHash } = require('@nichoth/multihash')
 
 const pic = fs.readFileSync(__dirname + '/cinnamon-roll.jpg')
@@ -21,3 +22,4 @@ const hashName = getHash(pic)
 console.log('hash name', hashName)
 // =>     hash name Ho1XhW2dp4bNJLZrYkurZPxlUhqrknD_Uu_nDp-KnMg.sha256
 ```
+
