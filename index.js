@@ -1,5 +1,6 @@
 // const isCanonicalBase64 = require('is-canonical-base64')
 const createHash = require('create-hash')
+const base64url = require('base64url');
 // var blobIdRegex = isCanonicalBase64('&', '.sha256', 32)
 // var Buffer = require('buffer/').Buffer
 // var isBuffer = Buffer.isBuffer
@@ -77,9 +78,9 @@ function getHash (toHash, alg) {
         blake() :
         createHash(alg || 'sha256')
 
-    // const hash = createHash(alg || 'sha256')
     hash.update(toHash)
-    return hash.digest('base64url') + '.' + (alg || 'sha256')
+    const digested = hash.digest('base64') + '.' + (alg || 'sha256')
+    return base64url.fromBase64(digested)
 }
 
 // given a blob, return a URL/path friendly string
