@@ -1,6 +1,6 @@
 {
   "name": "@nichoth/multihash",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Make hashes in browsers",
   "main": "index.js",
   "scripts": {
