@@ -80,7 +80,7 @@ function getHash (toHash, alg) {
 
     hash.update(toHash)
     const digested = hash.digest('base64') + '.' + (alg || 'sha256')
-    return base64url.fromBase64(digested)
+    return ('&' + base64url.fromBase64(digested))
 }
 
 // given a blob, return a URL/path friendly string

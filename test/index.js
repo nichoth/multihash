@@ -8,7 +8,7 @@ test('creates a hash', t => {
     console.log('hash name', hashName)
     t.ok(hashName, 'should create a hash filename')
     t.ok(hashName.includes('.sha256'), 'should use "sha256" by default')
-    t.equal(hashName, 'Ho1XhW2dp4bNJLZrYkurZPxlUhqrknD_Uu_nDp-KnMg.sha256',
+    t.equal(hashName, '&Ho1XhW2dp4bNJLZrYkurZPxlUhqrknD_Uu_nDp-KnMg.sha256',
         'should return the expected hash, url version')
     t.end()
 })
