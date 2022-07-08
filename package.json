@@ -1,6 +1,6 @@
 {
   "name": "@nichoth/multihash",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "description": "Make hashes in browsers",
   "main": "index.js",
   "scripts": {
@@ -25,9 +25,11 @@
   "homepage": "https://github.com/nichoth/multihash#readme",
   "dependencies": {
     "base64url": "^3.0.1",
-    "create-hash": "^1.2.0"
+    "create-hash": "^1.2.0",
+    "one-webcrypto": "^1.0.3"
   },
   "devDependencies": {
+    "browserify": "^17.0.0",
     "tap-arc": "^0.3.4",
     "tape": "^5.5.3",
     "tape-run": "^10.0.0"
