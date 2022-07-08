@@ -23,3 +23,14 @@ console.log('hash name', hashName)
 // =>     hash name Ho1XhW2dp4bNJLZrYkurZPxlUhqrknD_Uu_nDp-KnMg.sha256
 ```
 
+--------------------------------------
+
+```
+-rw-r--r--    1 nick  staff   230K Jul  8 08:08 bundle.js
+```
+
+vs with `one-webcrypto`:
+```
+-rw-r--r--    1 nick  staff   471B Jul  8 08:23 bundle.js
+```
+
