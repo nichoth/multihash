@@ -20,7 +20,7 @@ const { getHash } = require('@nichoth/multihash')
 const pic = fs.readFileSync(__dirname + '/cinnamon-roll.jpg')
 const hashName = getHash(pic)
 console.log('hash name', hashName)
-// =>     hash name Ho1XhW2dp4bNJLZrYkurZPxlUhqrknD_Uu_nDp-KnMg.sha256
+// =>     hash name 1e8d57856d9da786cd24b66b624bab64fc65521aab9270ff52efe70e9f8a9cc8.sha256
 ```
 
 --------------------------------------
