@@ -25,6 +25,14 @@ console.log('hash name', hashName)
 
 --------------------------------------
 
+Using these:
+```js
+const createHash = require('create-hash')
+const base64url = require('base64url');
+var Buffer = require('buffer/').Buffer
+```
+
+results in this bundle size:
 ```
 -rw-r--r--    1 nick  staff   230K Jul  8 08:08 bundle.js
 ```
