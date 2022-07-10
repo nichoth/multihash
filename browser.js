@@ -1,5 +1,3 @@
-const { webcrypto } = require('one-webcrypto')
-
 function getHash (data) {
     return webcrypto.subtle.digest('SHA-256', data).then(buf => {
         return (Array.from(new Uint8Array(buf), b => {
