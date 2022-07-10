@@ -5,6 +5,7 @@ const { getName, getHash } = require('../')
 test('creates a hash', t => {
     const pic = fs.readFileSync(__dirname + '/cinnamon-roll.jpg')
     getName(pic).then(hashName => {
+        console.log('hash name', hashName)
         t.ok(hashName, 'should create a hash filename')
         t.ok(hashName.includes('.sha256'), 'should use "sha256" by default')
         // base64url version
