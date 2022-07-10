@@ -30,9 +30,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
-    "esmify": "^2.1.1",
     "tap-arc": "^0.3.4",
-    "tape": "^5.5.3",
-    "tape-run": "^10.0.0"
+    "tape": "^5.5.3"
   }
 }
