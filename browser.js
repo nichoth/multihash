@@ -1,9 +1,13 @@
 const base64url = require('base64url');
-
 const webcrypto = window.crypto
 
 function getHash (data) {
-    return webcrypto.subtle.digest('SHA-256', data).then(buf => {
+    const te = new TextEncoder()
+    const _data = typeof data === 'string' ?
+        te.encode(data) :
+        data
+
+    return webcrypto.subtle.digest('SHA-256', _data).then(buf => {
         return base64url.encode(buf) + '.sha256'
 
         // this is hex version
