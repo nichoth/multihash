@@ -2,7 +2,6 @@ const { webcrypto } = require('one-webcrypto')
 const base64url = require('base64url');
 
 function getHash (data) {
-    console.log('node version !!!!!!!!!!!')
     return webcrypto.subtle.digest('SHA-256', data).then(buf => {
         return base64url.encode(buf) + '.sha256'
 
