@@ -1,4 +1,4 @@
-const base64url = require('base64url');
+const base64url = require('base64url')
 const webcrypto = window.crypto
 
 function getHash (data) {
@@ -19,6 +19,5 @@ function getHash (data) {
 }
 
 module.exports = {
-    getHash,
-    getName: getHash
+    getHash
 }
