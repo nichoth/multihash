@@ -20,7 +20,7 @@ const { getHash } = require('@nichoth/multihash')
 const pic = fs.readFileSync(__dirname + '/cinnamon-roll.jpg')
 const hashName = getHash(pic)
 console.log('hash name', hashName)
-// =>     hash name 1e8d57856d9da786cd24b66b624bab64fc65521aab9270ff52efe70e9f8a9cc8.sha256
+// =>     hash name 1e8d57856d9da786cd24b66b624bab64fc65521aab9270ff52efe70e9f8a9cc8
 ```
 
 --------------------------------------
@@ -28,6 +28,7 @@ console.log('hash name', hashName)
 ## bundle size
 
 ```
--rw-r--r--    1 nick  staff   471B Jul  8 08:23 bundle.js
+-rw-r--r--   1 nick  staff   4.9K Jan 10 17:08 index.cjs
+-rw-r--r--   1 nick  staff   661B Jan 10 17:08 index.mjs
 ```
 
