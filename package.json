@@ -50,7 +50,6 @@
     "browserify": "^17.0.0",
     "esbuild": "^0.16.16",
     "tap-arc": "^0.3.4",
-    "tape": "^5.5.3",
     "tape-run": "^10.0.0",
     "tapzero": "^0.6.1"
   }
