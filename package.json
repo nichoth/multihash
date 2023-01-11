@@ -10,7 +10,7 @@
     "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build",
     "build": "mkdir -p ./dist && rm -rf ./dist/* && mkdir -p dist/node && npm run build-mjs && npm run build-node && npm run build-node-esm && npm run build-cjs",
-    "build-cjs": "browserify dist/node/index.cjs > dist/index.cjs",
+    "build-cjs": "cp dist/node/index.cjs dist/index.cjs",
     "build-mjs": "cp ./src/index.mjs ./dist",
     "build-node": "esbuild src/index.mjs --format=cjs --platform=node --keep-names --outfile=./dist/node/index.cjs",
     "build-node-esm": "esbuild src/index.mjs --platform=node --keep-names --outfile=./dist/node/index.mjs"
