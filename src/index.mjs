@@ -1,7 +1,9 @@
-const base64url = require('base64url')
-const webcrypto = window.crypto
+import base64url from 'base64url'
+// const webcrypto = window.crypto
+// const { webcrypto } = require('one-webcrypto')
+import { webcrypto } from 'one-webcrypto'
 
-function getHash (data) {
+export const getHash = function getHash (data) {
     var _data = data
     if (typeof data === 'string') {
         const te = new TextEncoder()
@@ -9,7 +11,7 @@ function getHash (data) {
     }
 
     return webcrypto.subtle.digest('SHA-256', _data).then(buf => {
-        return base64url.encode(buf) + '.sha256'
+        return base64url.encode(buf)
 
         // this is hex version
         // return (Array.from(new Uint8Array(buf), b => {
@@ -18,6 +20,4 @@ function getHash (data) {
     })
 }
 
-module.exports = {
-    getHash
-}
+export default getHash

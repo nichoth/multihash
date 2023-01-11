@@ -2,12 +2,29 @@
   "name": "@nichoth/multihash",
   "version": "0.6.0",
   "description": "Make hashes in browsers",
-  "main": "index.js",
-  "browser": "browser.js",
+  "main": "src/index.mjs",
+  "browser": "src/index.mjs",
   "scripts": {
     "web-test": "browserify test/index.js | tape-run | tap-arc",
     "test": "node test/index.js | tap-arc",
-    "postversion": "git push && git push --tags && npm publish"
+    "postversion": "git push && git push --tags && npm publish",
+    "prepublishOnly": "npm run build",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && mkdir -p dist/node && npm run build-cjs && npm run build-mjs && npm run build-node && npm run build-node-esm",
+    "build-cjs": "esbuild src/index.mjs --bundle --format=cjs --keep-names --outfile=./dist/index.cjs",
+    "build-mjs": "cp ./src/index.mjs ./dist",
+    "build-node": "esbuild src/index.mjs --format=cjs --platform=node --keep-names --outfile=./dist/node/index.cjs",
+    "build-node-esm": "esbuild src/index.mjs --platform=node --keep-names --outfile=./dist/node/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "browser": {
+        "default": "./dist/index.mjs",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      },
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
   "repository": {
     "type": "git",
@@ -31,8 +48,10 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
+    "esbuild": "^0.16.16",
     "tap-arc": "^0.3.4",
     "tape": "^5.5.3",
-    "tape-run": "^10.0.0"
+    "tape-run": "^10.0.0",
+    "tapzero": "^0.6.1"
   }
 }
