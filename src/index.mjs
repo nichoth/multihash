@@ -1,6 +1,4 @@
 import base64url from 'base64url'
-// const webcrypto = window.crypto
-// const { webcrypto } = require('one-webcrypto')
 import { webcrypto } from 'one-webcrypto'
 
 export const getHash = function getHash (data) {
