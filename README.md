@@ -25,19 +25,8 @@ console.log('hash name', hashName)
 
 --------------------------------------
 
-Using these:
-```js
-const createHash = require('create-hash')
-const base64url = require('base64url');
-var Buffer = require('buffer/').Buffer
-```
+## bundle size
 
-results in this bundle size:
-```
--rw-r--r--    1 nick  staff   230K Jul  8 08:08 bundle.js
-```
-
-vs with `one-webcrypto`:
 ```
 -rw-r--r--    1 nick  staff   471B Jul  8 08:23 bundle.js
 ```
