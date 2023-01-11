@@ -28,7 +28,8 @@ console.log('hash name', hashName)
 ## bundle size
 
 ```
--rw-r--r--   1 nick  staff   4.9K Jan 10 17:08 index.cjs
--rw-r--r--   1 nick  staff   661B Jan 10 17:08 index.mjs
+total 16
+-rw-r--r--   1 nick  staff   469B Jan 10 17:39 index.cjs
+-rw-r--r--   1 nick  staff   576B Jan 10 17:39 index.mjs
 ```
 
