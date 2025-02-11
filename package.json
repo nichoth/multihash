@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "browserify": "^17.0.0",
-    "esbuild": "^0.16.16",
+    "esbuild": "^0.25.0",
     "tap-arc": "^0.3.4",
     "tape-run": "^11.0.0",
     "tapzero": "^0.6.1"
